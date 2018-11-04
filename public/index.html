@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+		<title>The Krusty Krab</title>
+
+		<link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script id="page-template" type="text/x-handlebars-template">
+        
+        <h1>The Krusty Krab!</h1>
+        <h3>Place Your Order Here.</h3>
+        <form class="create-form">
+            <div class="form-group">
+                <label for="name">Krusty Item Name:</label>
+                <input type="text" id="name" name="krusty_item_name" placeholder="Krusty Item">
+                <button class="btnColor btn btn-success" type="submit">Add Krusty Item</button>
+            </div> 
+        </form>
+        <div class='notDevoured section'>
+            <h2>Menu</h2>
+            <ul>
+                {{#each burgers}}
+                    {{#unless devoured}}
+                        <li>
+                            {{krusty_item_name}}
+                            <button class="eat-item" data-id="{{id}}">Eat!</button>
+                        </li>
+                    {{/unless}}
+                {{/each}}
+            </ul> 
+    
+        <div class="devoured section">
+            <div>
+                <h2>Devoured</h2>
+            </div>
+            <ul>
+                {{#each burgers}}
+                    {{#if devoured}}
+                    <li>
+                        {{krusty_item_name}}
+                    </li>
+                    {{/if}}
+                {{/each}}
+            </ul>
+
+        </div>
+
+        </script>
+
+    </head>
+
+    <body>
+        <div id="app"></div>
+    </body>    
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js"></script>
+	<script src="/assets/js/burgers.js"></script>
+</html>
