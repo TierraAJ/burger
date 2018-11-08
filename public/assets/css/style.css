@@ -5,8 +5,13 @@ body{
     min-height: 100%;
     text-align: center;
     background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../images/krusty-krab.jpg);
+}
+.navbar{
+    min-height: 80px !important;
 }
 .bottom-image{
     min-height: 100%;
-    background-image: url(../images/Krusty_Krab_-_5.png);
+    
 }
