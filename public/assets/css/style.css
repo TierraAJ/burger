@@ -1,5 +1,5 @@
 *{
-    font-family: 'spongeBob3','Courgette', cursive;
+    font-family: 'spongeBob2','Courgette', cursive;
   }
   @font-face
   {
@@ -34,7 +34,17 @@ body{
     text-align: center;
     margin-left: 20%;
     margin-right: 20%;
-    background-color: rgb(238,238,238, 0.3)
+    background-color: rgb(238,238,238,0.4) !important;
+}
+.btn{
+    font-size: 12px !important;
+    background-color: #1b5c1b !important;
+}
+.badge{
+    background-color: #1b5c1b !important;
+    border-color: #1b5c1b !important;
+    min-width: 60px !important;
+    font-weight: 0 !important;
 }
 .list-card{
     display: inline-grid;
